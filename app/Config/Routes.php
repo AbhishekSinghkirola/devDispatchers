@@ -21,7 +21,7 @@ $routes->set404Override();
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
 // $routes->setAutoRoute(false);
 
-/*
+/*git add .
  * --------------------------------------------------------------------
  * Route Definitions
  * --------------------------------------------------------------------
@@ -30,7 +30,8 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
+$routes->get('/login','Testing::index');
+$routes->get('/registration','Testing::reg');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

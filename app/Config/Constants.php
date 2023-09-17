@@ -92,3 +92,18 @@ define('EVENT_PRIORITY_NORMAL', 100);
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_HIGH instead.
  */
 define('EVENT_PRIORITY_HIGH', 10);
+
+
+/*
+ | --------------------------------------------------------------------
+ | Base Url
+ | --------------------------------------------------------------------
+
+ Automatically generate the base url for our website
+*/
+$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+$domain = @$_SERVER['HTTP_HOST'];
+$script_name = str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']); // remove the index.php file from the end
+$base_url = $protocol . "://" . $domain . $script_name;
+
+defined('BASE_URL') || define('BASE_URL', $base_url);

@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\Pages;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
